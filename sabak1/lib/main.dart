@@ -30,8 +30,12 @@ class gg extends StatefulWidget {
   State<gg> createState() => _ggState();
 }
  class _ggState extends State<gg> {
+  int index = 20;
   @override
   Widget build(BuildContext context) {
+
+
+
      return  Scaffold(backgroundColor:  Colors.white,
       appBar: AppBar(
         centerTitle: true,
@@ -40,22 +44,45 @@ class gg extends StatefulWidget {
          backgroundColor: Colors.white,
 
       elevation: 0,
-    title: Text('tapchirma1',style: TextStyle(color: Colors.red),),
+    title: Text('TAPCHIRMA',style: TextStyle(color: Color.fromARGB(255, 149, 219, 245)),),
       ), 
      body: Padding(
-       padding: const EdgeInsets.symmetric(horizontal: 30),
-       child: Column(children: [
-     
-        Container(
-          color: Colors.grey,
-          width: double.infinity,
-          height: 30,
-          
-          child: Center(child: Text ('цыфра:0'))),
-          Row(children: [
-         ElevatedButton(onPressed: (){}, child: Icon(Icons.remove))   
-          ],)
-       ],),
+       padding: const EdgeInsets.symmetric(horizontal: 90),
+       child: Center(
+         child: Column(mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            
+          Container(
+            
+            width: double.infinity,
+            height: 50,
+            decoration: BoxDecoration(color: Color.fromARGB(255, 195, 212, 233),borderRadius: BorderRadius.circular(28)),
+            
+            child: Center(child: Text ('$index',style: TextStyle(fontSize: 35)))),
+            SizedBox(height: 50,),
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                
+           ElevatedButton(onPressed: (){setState(() {
+             index --;
+           });
+
+           }, 
+           
+           child:
+             
+            Icon(Icons.remove)),
+           SizedBox(width: 15,),
+           ElevatedButton(onPressed: (){
+            setState(() {  index ++;
+              
+            });
+            
+
+           }, child: Icon(Icons.add) ),  
+            ],)
+         ],),
+       ),
      ),
      );
   }
