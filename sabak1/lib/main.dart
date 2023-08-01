@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sabak1/secondPage.dart';
 
 
 void main() {
@@ -41,7 +42,7 @@ class gg extends StatefulWidget {
         centerTitle: true,
 
         
-         backgroundColor: Colors.white,
+         backgroundColor: const Color.fromARGB(255, 147, 93, 93),
 
       elevation: 0,
     title: Text('TAPCHIRMA',style: TextStyle(color: Color.fromARGB(255, 149, 219, 245)),),
@@ -63,9 +64,12 @@ class gg extends StatefulWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 
-           ElevatedButton(onPressed: (){setState(() {
+           ElevatedButton( 
+            style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 229, 109, 58)),
+            onPressed: (){setState(() {
              index --;
            });
+          
 
            }, 
            
@@ -73,14 +77,27 @@ class gg extends StatefulWidget {
              
             Icon(Icons.remove)),
            SizedBox(width: 15,),
-           ElevatedButton(onPressed: (){
+           ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 114, 179, 238)),
+            onPressed: (){
             setState(() {  index ++;
               
             });
             
 
-           }, child: Icon(Icons.add) ),  
-            ],)
+           }, child: Icon(Icons.add) ),
+           
+
+           
+
+            ],),
+             const SizedBox(height:40),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Ekinchbet()));
+            }, icon: Icon(Icons.skip_next_rounded,size: 40,
+            color: Colors.blue,) ),
+
+            
          ],),
        ),
      ),
