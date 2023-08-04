@@ -37,15 +37,19 @@ class gg extends StatefulWidget {
 
 
 
-     return  Scaffold(backgroundColor:  Colors.white,
+     return  Scaffold(
+      
+      backgroundColor:  Colors.white,
       appBar: AppBar(
+        
         centerTitle: true,
 
         
          backgroundColor: const Color.fromARGB(255, 147, 93, 93),
+         
 
       elevation: 0,
-    title: Text('TAPCHIRMA',style: TextStyle(color: Color.fromARGB(255, 149, 219, 245)),),
+    title: Text('TAPCHIRMA',style: TextStyle(color: Color.fromRGBO(245, 149, 149, 1)),),
       ), 
      body: Padding(
        padding: const EdgeInsets.symmetric(horizontal: 90),
