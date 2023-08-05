@@ -44,20 +44,36 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body:  Column(
+     body: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child:
+             
+               Container(
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/foto.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+      
+     child:  Column(
         children: [
+ 
           Text(
-            'csgo',
+            'csgojj',
             
-            style: TextStyle(color: Colors.black,
+            style: TextStyle(color: Colors.green,
             fontSize: 30,
             fontWeight: FontWeight.w700),
             
             
           ),
-          Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZT6jqWouQhBrxVToElJWC2S8zxn_Q9URDQ&usqp=CAU',)
+         
+         // Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZT6jqWouQhBrxVToElJWC2S8zxn_Q9URDQ&usqp=CAU',)
         ],
-      ),
-    );
+      )
+    )
+    ));
   }
 }
